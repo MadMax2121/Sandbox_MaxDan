@@ -2,27 +2,21 @@
 // Java implementation of QuickSort
 class one_2 {
 	// A utility function to swap two elements
-	static void swap(String str, int i, int j)
-	{
-        String middle;
-		String start = str.substring(0, i);
-        if (i != j) {
-         middle = str.substring(i+1,j);
-        } 
-        else {
-            middle = "";
+    static void swap(String str, int i, int j)
+    {
+        if (j == str.length() - 1)
+        {
+            str =  str.substring(0, i) + str.charAt(j)
+                + str.substring(i + 1, j) + str.charAt(i);
         }
-        if (j == str.length() - 1) {
-            char end = str.charAt(j);
-            str = start + str.charAt(j) + middle + str.charAt(i) + end;
-        } else {
-       
-            String end = str.substring(j+1);
-            str = start + str.charAt(j) + middle + str.charAt(i) + end;
-        }
+ 
+        str =  str.substring(0, i) + str.charAt(j)
+            + str.substring(i + 1, j) + str.charAt(i)
+            + str.substring(j + 1, str.length());
+
         System.out.println(str);
-       
-	}
+    }
+    
 
 	// This function takes last element as pivot,
 	// places the pivot element at its correct position
