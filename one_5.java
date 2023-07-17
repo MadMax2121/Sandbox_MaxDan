@@ -5,7 +5,7 @@
 public class one_5 {
     public static void main(String[] args) {
         System.out.println("pale, pal -> " + oneAway("pale","pal"));
-        System.out.println("pales, pale -> " + oneAway("pales","pale"));
+        System.out.println("bane, pale -> " + oneAway("bane","pale"));
         System.out.println("pale, bale -> " + oneAway("pale","bale"));
         System.out.println("pale, bake -> " + oneAway("pale","bake"));
     }
